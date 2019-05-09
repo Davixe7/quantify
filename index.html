@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" href="./img/favicon.png">
+</head>
+<body>
+  <div id="app">
+
+
+    <!-- navigation -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portafolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+      <a class="navbar-brand" href="#"><img src="./img/header-logo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars color-white"></i>
+      </button>
+    </nav>
+
+    <div id="home-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto caption">
+            Nosotros elevamos<br>
+            tu marca al cuadrado<br>
+            <small>con un buen</small>
+            <a href="" class="typewrite dark-red" data-period="2000" data-type='[ "act", "imagine", "think"]'>
+              &nbsp<span class="wrap"></span>
+            </a>
+            differently
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="waves">
+      <div class="wave2"></div>
+      <div class="fill"></div>
+    </div>
+
+    <div id="potenciamos">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 text-center">
+            <img src="./img/logo.png" alt="">
+          </div>
+          <div class="col-lg-6 d-flex">
+            <div class="quadrado-wrap"><img src="./img/quadrado.png" alt=""></div>
+            <div>
+              <h2>Potenciamos <span class="faux-blue">marcas</span>
+                <div class="subheading">
+                  <span class="faux-blue">quantificamos</span> lazos
+                </div>
+              </h2>
+              <p>En Quantify, somos un equipo de pensadores que damos soluciones y potenciamos marcas, clientes y vidas. Creamos lazos  y nos encargamos de mantenerlos estrechos. En Quantify, somos un equipo de pensadores que damos soluciones y potenciamos marcas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="video">
+      <div class="container">
+        <!-- <div class="video-wrap">
+        <video src="./img/video.mp4" autoplay controls style="width: 100%;"></video>
+      </div> -->
+      <img src="./img/video.png" alt="video.png" style="margin-bottom: -30px;">
+      <div class="text-center">
+        <div class="tag">Thats what we are!</div>
+      </div>
+    </div></div>
+
+    <div id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4" v-for="s in services">
+            <div class="service">
+              <img :src="'./img/' + s.img" alt="">
+              <div class="bg-red text">
+                <h3>{{ s.name }}</h3>
+                {{ s.desc }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Particles JS -->
+    <div id="particles-js" class="d-none d-md-block" style="height: 300px; background: #e00f3d;"></div>
+
+    <div id="sites">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 p-0 site" v-for="n in 9">
+            <a href="#" class="overlay">
+              <img src="./img/inicial_categoria.png">
+              <div class="caption">
+                <div class="title">Togas Service</div>
+                <div class="category">Web Site</div>
+              </div>
+            </a>
+            <img :src="'./img/site' + n + '.png'" alt="" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h3>Trabajamos cada proyecto<br> como el primero</h3>
+            <form action="">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Nombres y apellidos" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="phone" class="form-control" name="phone" id="phone" placeholder="Numero de contacto" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="mensaje" class="form-control" name="mensaje" id="mensaje" placeholder="Mensaje" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <button class="btn-submit">Enviar información</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="footer-brand">
+              <img src="./img/footer-logo.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h5>Contactanos a</h5>
+            <ul>
+              <li>Asociación. Villa Libertad de Monterrico. Surco</li>
+            </ul>
+          </div>
+          <div class="col-md-3 offset-md-1">
+            <h5>Horario de atención</h5>
+            <ul>
+              <li>Lunes a Viernes: 9:00 a.m. a 7:00 p.m.</li>
+              <li>Sábados: 9:00 a.m. a 1:00 p.m</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="socials">
+              <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<script src="./js/vue.js"></script>
+<script src="./js/typewriter.js"></script>
+<script src="./js/particles.min.js"></script>
+<script>
+const app = new Vue({
+  el: '#app',
+  data: {
+    services: [
+      {
+        img: 'branding.png',
+        name: 'Branding',
+        desc: 'Nos apropiamos de la identidad de marca, la creamos desde 0 o potenciamos la que ya tienes siguiendo el AND de la compañía'
+      },
+      {
+        img: 'packagin.png',
+        name: 'Packaging',
+        desc: 'La  primera impresión cuenta, aunque vendas oro en líquido, sino tiene buena presentación no se venderá. Déjanos la imagen a nosotros.'
+      },
+      {
+        img: 'webux.png',
+        name: 'Web Ux',
+        desc: 'Diseñamos y codificamos la web de acuerdo al perfil de tu público objetivo, la hacemos fácil, interactiva e informativa para aumentar el nivel de atención.'
+      },
+      {
+        img: 'audiovisual.png',
+        name: 'Audiovisual',
+        desc: 'Nos apropiamos de la identidad de marca, la creamos desde 0 o potenciamos la que ya tienes siguiendo el AND de la compañía'
+      },
+      {
+        img: 'digitalmanager.png',
+        name: 'Digital Manager',
+        desc: 'La  primera impresión cuenta, aunque vendas oro en líquido, sino tiene buena presentación no se venderá. Déjanos la imagen a nosotros.'
+      }
+    ]
+  },
+  methods:{},
+  mounted(){}
+})
+particlesJS.load('particles-js', './js/particlesjs-config.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+</script>
+</html>
